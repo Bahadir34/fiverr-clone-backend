@@ -1,0 +1,19 @@
+# Bağımlılıklar (image içinde npm ci ile yüklenecek)
+node_modules
+npm-debug.log*
+# .env build'a dahil edilmez; runtime'da compose/env ile verilir
+.env
+.env.*
+!.env.example
+# Git ve IDE
+.git
+.gitignore
+.DS_Store
+.vscode
+.idea
+# Test ve geçici dosyalar
+*.test.js
+*.spec.js
+coverage
+tmp
+temp
