@@ -1,18 +1,13 @@
-import dotnev from "dotenv";
+import dotenv from "dotenv";
 
-// proje ayaga kakldirilirken belirlenen NODE_ENV degerine gore hangi env dosyasi kullanilacak bunu belirleyecegiz
-const envFile =
-  process.env.NODE_ENV === "production"
-    ? ".env.production"
-    : ".env.development";
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({ path: ".env.development" });
+  dotenv.config();
+} else {
+  dotenv.config({ path: ".env.production" });
+  dotenv.config();
+}
 
-// yukarida belirlenen ortam degiskenlerini yukle
-dotnev.config({ path: envFile });
-
-// eger yukaridaki komut prod veya dev env lerini yuklyemezse bu kod satiri calisir ve .env yi yukler
-dotnev.config();
-
-// degiskenlerin tiplerini varsayilan degerlerini tanimlayip export edicez.
 export const config = {
   NODE_ENV: process.env.NODE_ENV || "development",
   PORT: process.env.PORT || 3000,
