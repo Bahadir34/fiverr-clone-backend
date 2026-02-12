@@ -2,7 +2,7 @@ import { v2 as cloudinary } from "cloudinary";
 import e from "./error.js";
 import { config } from "../config/environment.js";
 
-dotenv.config();
+ 
 
 // cloudinary config settings
 cloudinary.config({
