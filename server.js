@@ -70,6 +70,12 @@ mongoose
   .catch((e) => {
     if (isDevelopment) {
       console.log("Database connection is fail!", e, config.DB_URL);
+    } else {
+      console.log(
+        "Database connection is fail on production mode!",
+        e,
+        config.DB_URL,
+      );
     }
   });
 
