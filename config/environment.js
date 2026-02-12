@@ -22,8 +22,8 @@ export const config = {
   DB_URL: process.env.DB_URL,
 
   // auth
-  API_SECRET: process.env.JWT_SECRET,
-  API_EXP: process.env.JWT_EXPIRES,
+  API_SECRET: process.env.API_SECRET_KEY,
+  API_EXP: process.env.API_EXP,
 
   // cloudinary
   CLOUD_NAME: process.env.CLOUD_NAME,

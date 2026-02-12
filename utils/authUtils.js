@@ -2,6 +2,7 @@ import jsonwebtoken from "jsonwebtoken";
 import { config, isProduction } from "../config/environment.js";
 
 export const createAndSaveToken = (id, isSeller, res) => {
+  console.log(config.API_SECRET);
   const token = jsonwebtoken.sign({ id, isSeller }, config.API_SECRET, {
     expiresIn: config.API_EXP,
   });
