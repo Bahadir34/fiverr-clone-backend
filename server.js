@@ -80,11 +80,11 @@ app.get("/api/v1/test", (req, res, next) => {
   });
 });
 
-app.get("api/v1/debug-env", (req, res, next) => {
-  return res.status(200).json({
+app.get("/debug", (req, res, next) => {
+  res.status(200).json({
     success: true,
     data: {
-      URL: process.env.DB_URL ? "SET ✓" : "NOT SET ✗",
+      URL: config.DB_URL,
       PORT: process.env.PORT,
       API_SECRET_KEY: process.env.API_SECRET_KEY ? "SET ✓" : "NOT SET ✗",
       CROSS_ORIGIN: process.env.CROSS_ORIGIN,

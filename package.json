@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_ENV=production node server.js",
-    "start:dev": "NODE_ENV=development npm start",
+    "start": "node server.js",
+    "start:dev": "NODE_EdevelopmentNV= npm start",
     "start:prod": "NODE_ENV=production npm start",
     "dev": "NODE_ENV=development nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
