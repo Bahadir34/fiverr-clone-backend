@@ -86,17 +86,6 @@ app.get("/api/v1/test", (req, res, next) => {
   });
 });
 
-app.get("/debug", (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    data: {
-      URL: config.DB_URL,
-      PORT: process.env.PORT,
-      API_SECRET_KEY: process.env.API_SECRET_KEY ? "SET ✓" : "NOT SET ✗",
-      CROSS_ORIGIN: process.env.CROSS_ORIGIN,
-    },
-  });
-});
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/gigs", gigRoute);
