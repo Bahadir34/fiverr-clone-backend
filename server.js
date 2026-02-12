@@ -73,7 +73,7 @@ mongoose
     }
   });
 
-app.use("/api/v1/test", (req, res, next) => {
+app.get("/api/v1/test", (req, res, next) => {
   res.status(200).json({
     status: 200,
     message: "Server is healthy.",
