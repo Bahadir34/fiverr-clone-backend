@@ -1,5 +1,4 @@
 import { v2 as cloudinary } from "cloudinary";
-import dotenv from "dotenv";
 import e from "./error.js";
 import { config } from "../config/environment.js";
 
