@@ -73,6 +73,12 @@ mongoose
     }
   });
 
+app.use("/api/v1/test", (req, res, next) => {
+  res.status(200).json({
+    status: 200,
+    message: "Server is healthy.",
+  });
+});
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/gigs", gigRoute);
